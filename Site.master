@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>儿童服装商城</title>
+    <link rel="stylesheet" href="/styles/site.css" />
+</head>
+<body>
+    <form runat="server" class="page-root">
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="logo">
+                    <a href="/index.aspx">儿童服装商城</a>
+                </div>
+                <nav class="main-nav">
+                    <a href="/index.aspx">首页</a>
+                    <a href="/index.aspx">新品</a>
+                    <a href="/index.aspx">热销</a>
+                    <a href="/index.aspx">活动</a>
+                </nav>
+                <div class="header-tools">
+                    <asp:Literal ID="litUser" runat="server"></asp:Literal>
+                    <a class="icon" href="/ShoppingCart.aspx" title="购物车">购物车</a>
+                </div>
+            </div>
+            <div class="search-bar container">
+                <asp:TextBox ID="txtSearchHeader" runat="server" CssClass="search-input" placeholder="搜索童装、连体衣、外套..." />
+                <asp:Button ID="btnSearchHeader" runat="server" Text="搜索" CssClass="search-btn" OnClick="btnSearchHeader_Click" />
+            </div>
+        </header>
+
+        <div class="page-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>示例儿童服装商城 — 精选舒适、优质童装。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助</h4>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">售后政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <p>电话：13800000000</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 儿童服装商城 示例
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
